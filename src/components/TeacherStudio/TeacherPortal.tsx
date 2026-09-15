@@ -32,8 +32,8 @@ export const TeacherPortal: React.FC<TeacherPortalProps> = ({
     }
 
     // Kondisi 2 — Nama salah (bukan Diva)
-    if (trimmedName !== 'Diva') {
-      setErrorMessage('Nama guru tidak dikenali.');
+    if (trimmedName.toLowerCase() !== 'diva') {
+      setErrorMessage('Akses guru khusus untuk nama Diva.');
       soundFX.playInspectClick();
       return;
     }
@@ -116,7 +116,7 @@ export const TeacherPortal: React.FC<TeacherPortalProps> = ({
                     setTeacherName(e.target.value);
                     if (errorMessage) setErrorMessage(null);
                   }}
-                  placeholder="Masukkan nama guru"
+                  placeholder="Masukkan nama guru (Diva)"
                   className="w-full rounded-xl border border-[#69021E]/60 bg-[#030206]/80 py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:border-[#AA0235] focus:outline-none focus:ring-2 focus:ring-[#AA0235]/30 transition"
                   autoComplete="username"
                   autoFocus
