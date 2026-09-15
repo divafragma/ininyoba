@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', 'Cormorant Garamond', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Theme Palette */
+    --color-crimson: #AA0235;
+    --color-wine: #69021E;
+    --color-obsidian: #030206;
+    --color-navy: #021233;
+    --color-plum: #710755;
+    --color-pastel-yellow: #fef08a;
+    --color-pastel-cream: #fef9c3;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #030206;
+    color: #f8fafc;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(170, 2, 53, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 85% 25%, rgba(113, 7, 85, 0.10) 0%, transparent 45%),
+      radial-gradient(circle at 15% 75%, rgba(2, 18, 51, 0.40) 0%, transparent 50%),
+      radial-gradient(circle at 50% 100%, rgba(105, 2, 30, 0.15) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Atmospheric / Soft Pastel Glass & Velvet Media Styling */
+.card-glass {
+  background: rgba(8, 5, 12, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(170, 2, 53, 0.25);
+  box-shadow: 0 16px 36px -12px rgba(3, 2, 6, 0.8), inset 0 1px 1px 0 rgba(254, 240, 138, 0.08);
+}
+
+.card-glass-wine {
+  background: rgba(20, 4, 12, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(105, 2, 30, 0.45);
+  box-shadow: 0 16px 36px -12px rgba(3, 2, 6, 0.8), inset 0 1px 1px 0 rgba(254, 240, 138, 0.06);
+}
+
+.card-glass-navy {
+  background: rgba(2, 18, 51, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(2, 18, 51, 0.8);
+  box-shadow: 0 16px 36px -12px rgba(3, 2, 6, 0.8), inset 0 1px 1px 0 rgba(254, 240, 138, 0.06);
+}
+
+.card-glass-plum {
+  background: rgba(24, 5, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(113, 7, 85, 0.4);
+  box-shadow: 0 16px 36px -12px rgba(3, 2, 6, 0.8), inset 0 1px 1px 0 rgba(254, 240, 138, 0.06);
+}
+
+/* Soft Pastel Accents (No harsh neon) */
+.pastel-glow {
+  box-shadow: 0 8px 24px -6px rgba(170, 2, 53, 0.25), 0 2px 8px -2px rgba(254, 240, 138, 0.12);
+}
+
+.pastel-yellow-glow {
+  box-shadow: 0 6px 20px -4px rgba(254, 240, 138, 0.15);
+}
+
+.cascade-line {
+  background: linear-gradient(180deg, rgba(170, 2, 53, 0.6) 0%, rgba(113, 7, 85, 0.4) 50%, transparent 100%);
+}
+
+.card-perspective {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.cosmic-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(254, 240, 138, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(254, 240, 138, 0.018) 1px, transparent 1px);
+}
+
+.card-shine {
+  background: linear-gradient(
+    135deg,
+    rgba(254, 240, 138, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 2, 6, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(170, 2, 53, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(170, 2, 53, 0.7);
+}
+
+
